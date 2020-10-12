@@ -1,0 +1,19 @@
+en:
+  activerecord:
+
+    shared:
+      'no': 'No'
+      'yes': 'Yes'
+      id: 'ID'
+      file: 'File'
+      image: 'File'
+      hidden: 'Hidden'
+      deleted: 'Deleted'
+      visible: 'Visible'
+      invisible: 'Invisible'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+
+    models:
+
+    attributes:

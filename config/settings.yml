@@ -1,0 +1,13 @@
+overall:
+  url: 'http://localhost:3000'
+  timezone: 'Riga' # list timezones: ActiveSupport::TimeZone.all.map(&:name)
+
+locales:
+  default:   'en'
+  visible:   ['en'] # locales publicly visible
+  available: ['en'] # locales in project. Usually add here first, so admin can translate views in admin panel
+  fallbacks:
+    en: ['en']
+
+mailer:
+  default_from: 'no-reply@example.com'

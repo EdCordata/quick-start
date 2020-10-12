@@ -1,0 +1,12 @@
+en:
+  js:
+
+    plugins:
+
+      select2:
+        loading_more: 'Loading..'
+        max_selected: 'Max selected'
+        error_loading: 'Failed to load'
+        input_too_long: 'Too long'
+        input_too_short: 'Too short'
+        no_records_found: 'Nothing found'

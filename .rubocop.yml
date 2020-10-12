@@ -1,0 +1,16 @@
+# https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml
+
+Layout/LineLength:
+  Max: 120
+
+Layout/HashAlignment:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false

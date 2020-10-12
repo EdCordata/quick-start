@@ -1,4 +1,24 @@
 # IDE
-.idea/
-.vscode/
-.atom/
+/.vscode/
+/.idea/
+/.atom/
+
+# DB
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-[0-9]*
+
+# Temp
+/tmp/*
+!/tmp/pids/
+/tmp/pids/*
+!/tmp/pids/.keep
+
+# Logs
+/log/*
+!/log/.keep
+
+# Rspec
+/test
+/coverage/
+/spec/tmp
