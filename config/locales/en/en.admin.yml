@@ -1,0 +1,18 @@
+en:
+  admin:
+
+    views:
+
+      shared:
+        all: 'All'
+        edit: 'Edit'
+        show: 'Show'
+        save: 'Save'
+        count: 'Count'
+        clear: 'Clear'
+        search: 'Search'
+        no_records_found: 'No records found'
+
+      main_menu:
+        home: 'Home'
+        dashboard: 'Dashboard'

@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get '/console', to: 'application#console', constraints: ConsoleConstraint.new
   # ----------------------------------------------------------------------------
 
-  # Setup Root
+  # Setup Root & Admin
   # ----------------------------------------------------------------------------
   root to: 'pages#root'
+
+  get '/admin', to: redirect("/#{I18n.locale}/admin")
 
   get '/:locale', to: redirect('/')
   # ----------------------------------------------------------------------------
@@ -22,6 +24,18 @@ Rails.application.routes.draw do
     get  '/sign_in',  to: 'user/sessions#new',         as: :sign_in
     post '/sign_in',  to: 'user/sessions#create',      as: :sign_in_post
     # ----------------------------------------------------------------------------
+
+    # Admin
+    # ==========================================================================
+    namespace :admin do
+
+      # Pages
+      # --------------------------------------------------------------------------
+      get '/', to: 'pages#dashboard'
+      # --------------------------------------------------------------------------
+
+    end
+    # ==========================================================================
 
   end
 end

@@ -1,0 +1,11 @@
+%li.nav-item.dropdown
+  %a#navbarDropdown.nav-link.dropdown-toggle{'aria-expanded':  false,
+                                              'aria-haspopup': true,
+                                              'data-toggle':   'dropdown',
+                                              href:            '#',
+                                              role:            'button'}
+    = t('language')
+  .dropdown-menu{'aria-labelledby': 'navbarDropdown'}
+    - I18n.available_locales.each do |locale|
+      = link_to t("locales.#{locale}"), {locale: locale}, class: 'dropdown-item'
+

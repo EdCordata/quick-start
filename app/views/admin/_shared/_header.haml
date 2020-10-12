@@ -1,4 +1,4 @@
-%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
 
   %a.navbar-brand{href: "#"}= t('overall.name')
 
@@ -17,17 +17,4 @@
       %li.nav-item= link_to t('views.header.links.admin'), admin_path, class: 'nav-link'
 
     %ul.navbar-nav.ml-auto
-      - if current_user
-
-        %li.nav-item= link_to current_user.email, '#', class: 'nav-link'
-
-        = render partial: '_shared/header_language_switch_item'
-
-        %li.nav-item= link_to t('views.header.links.sign_out'), sign_out_path, class: 'nav-link'
-
-      - else
-        %li{class: "nav-item #{header_active_item(:sign_in)}"}= link_to t('views.header.links.sign_in'), sign_in_path, class: 'nav-link'
-
-        %li{class: "nav-item #{header_active_item(:sign_up)}"}= link_to t('views.header.links.sign_up'), sign_up_path, class: 'nav-link'
-
-        = render partial: '_shared/header_language_switch_item'
+      = render partial: '_shared/header_language_switch_item'

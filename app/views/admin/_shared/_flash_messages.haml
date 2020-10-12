@@ -1,0 +1,7 @@
+- if flash[:notice]
+  .container{style: 'max-width: 500px; margin: 50px auto;'}
+    .alert.alert-success= flash[:notice]
+
+- if flash[:alert]
+  .container{style: 'max-width: 500px; margin: 50px auto;'}
+    .alert.alert-danger= flash[:alert]
