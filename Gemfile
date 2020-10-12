@@ -36,6 +36,11 @@ gem 'rails-i18n', '6.0.0'
 gem 'globalize-accessors', '0.1.5'
 gem 'globalize-validations', '0.0.4'
 
+# BG
+gem 'resque', '2.0.0'
+gem 'resque-scheduler', '4.4.0'
+gem 'resque-scheduler-web', '1.1.0'
+
 # Misc
 gem 'foreman', '0.87.2'
 gem 'config', '2.2.1'

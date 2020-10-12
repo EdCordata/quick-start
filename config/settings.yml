@@ -16,3 +16,20 @@ redis:
   url: 'redis://localhost:6379/1'
   namespace: <%= "rails_quick_start_#{Rails.env}" %>
 
+# Workers config here is ignored in development,
+# if Procfile is used to run resque.
+# It only affects rake resque workers.
+resque:
+  verbose: true
+  wait_before_kill: 20 # seconds
+  workers:
+    -
+      enabled:  true # change to false and run rake resque:restart_workers
+      queues:   ['default']
+      interval: 1 # seconds
+
+resque_scheduler:
+  verbose: true
+  pid_path: '/tmp/pids/resque_scheduler.pid'
+  interval: 1 # seconds
+  jobs:
