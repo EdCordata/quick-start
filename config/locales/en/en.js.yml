@@ -10,3 +10,9 @@ en:
         input_too_long: 'Too long'
         input_too_short: 'Too short'
         no_records_found: 'Nothing found'
+
+      datetime_picker:
+        cancel_text: 'Cancel'
+        clear_text: 'Clear'
+        now_text: 'Now'
+        ok_text: 'OK'

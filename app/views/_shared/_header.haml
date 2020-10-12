@@ -1,0 +1,19 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+
+  %a.navbar-brand{href: "#"}= t('overall.name')
+
+  %button.navbar-toggler{'aria-controls':  'navbarMainMenuContent',
+                          'aria-expanded': false,
+                          'data-target':   '#navbarMainMenuContent',
+                          'data-toggle':   'collapse',
+                          'aria-label':    'Toggle navigation',
+                          type:            'button'}
+    %span.navbar-toggler-icon
+
+  #navbarMainMenuContent.collapse.navbar-collapse
+
+    %ul.navbar-nav.mr-auto
+      %li.nav-item= link_to t('views.header.links.home'), root_path, class: 'nav-link'
+
+    %ul.navbar-nav.ml-auto
+      = render partial: '_shared/header_language_switch_item'

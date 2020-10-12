@@ -2,3 +2,7 @@ en:
   views:
 
     shared:
+
+    header:
+      links:
+        home: 'Home'

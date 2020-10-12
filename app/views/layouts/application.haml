@@ -14,4 +14,7 @@
 
   %body
     = Gon::Base.render_data
-    = yield
+    = render(partial: '_shared/header')
+    .container
+      = render(partial: '_shared/flash_messages')
+      = yield

@@ -1,0 +1,76 @@
+body > .container {
+  max-width: 1200px;
+  padding: 0 20px 50px 20px;
+  margin: 0 auto;
+}
+
+table.table:not(.no-hover) tr:hover {
+  outline: solid 1px #727272;
+}
+
+table.table:not(.no-hover) tr:hover td {
+  background-color: #A9CEE2 !important;
+}
+
+nav.navbar {
+  -webkit-box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.2);
+  -moz-box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.2);
+  box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.2);
+}
+
+.card,
+.btn,
+.card > .card-img-top,
+input,
+select,
+textarea {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.card {
+  -webkit-box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.2);
+  -moz-box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.2);
+  box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.2);
+}
+
+.btn {
+  -webkit-box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.6);
+  -moz-box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.6);
+  box-shadow: 2px 2px 2px rgba(160, 160, 160, 0.6);
+}
+
+.btn.btn-default {
+  background: #FFF;
+  border: solid 1px #DBD9D9;
+}
+
+.btn.btn-default:hover {
+  background-color: #E6E5E5;
+}
+
+table.table td.actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* fix header dropdown */
+nav.navbar ul.navbar-nav.ml-auto {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar ul.navbar-nav.ml-auto li {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 0;
+  margin: 0;
+}
+
+nav.navbar ul.navbar-nav.ml-auto li .dropdown-menu {
+  position: absolute;
+  left: -60px;
+}
+/* fix header dropdown */

@@ -19,6 +19,11 @@ gem 'turbolinks', '5.2.1'
 gem 'mini_racer', '0.3.1', platforms: :ruby
 gem 'gon', '6.3.2'
 
+# Assets
+gem 'font-awesome-rails', '4.7.0.5'
+gem 'momentjs-rails', '2.20.1'
+gem 'bootstrap', '4.5.2'
+
 # Views
 gem 'dependent-fields-rails', '0.4.2'
 gem 'nested_form_fields', '0.8.4'
