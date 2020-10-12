@@ -6,3 +6,14 @@ en:
     header:
       links:
         home: 'Home'
+        sign_in: 'Sign In'
+        sign_up: 'Sign Up'
+        sign_out: 'Sign Out'
+
+    user:
+
+      registrations:
+        sign_up: 'Sign Up'
+
+      sessions:
+        sign_in: 'Sign In'

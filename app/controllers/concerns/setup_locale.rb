@@ -12,7 +12,7 @@ module SetupLocale
   protected
 
   def set_locale
-    locale = params[:locale] || cookies[:current_locale]
+    locale = params[:locale] || cookies[:current_locale] || current_user.try(:locale)
 
     locale = I18n.default_locale unless I18n.available_locales.include?(locale.to_s.to_sym)
 

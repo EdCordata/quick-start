@@ -1,2 +1,17 @@
 en:
   enumerize:
+
+    version:
+      event:
+        system:       'System'
+        approve:      'Approve'
+        create:       'Create'
+        update:       'Update'
+        delete:       'Delete'
+        un_delete:    'Un-delete'
+        admin_update: 'Admin update'
+
+    user:
+      role:
+        user: 'User'
+        developer: 'Developer'
