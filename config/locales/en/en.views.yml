@@ -6,3 +6,4 @@ en:
     header:
       links:
         home: 'Home'
+        admin: 'Admin'
