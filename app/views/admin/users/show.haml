@@ -1,0 +1,50 @@
+.mt-20
+  = link_to t('admin.views.shared.all'),  admin_users_path,            class: 'btn btn-sm btn-primary'
+  = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-sm btn-success' if can?(:edit, @user)
+  = admin_login_as_user_link(@user)
+
+
+.card.mt-20
+  .card-header.pt-12.pl-12
+    %strong= t('activerecord.models.user')
+  .card-title.mb-0
+    .table-responsive
+      %table.table.no-hover.table-borderless.table-striped.mb-0
+        %tr
+          %td= t('activerecord.shared.id')
+          %td= @user.id
+        %tr
+          %td= t('activerecord.shared.hash_id')
+          %td= @user.hash_id
+        %tr
+          %td= t('activerecord.attributes.user.email')
+          %td= @user.email
+        %tr
+          %td= t('activerecord.attributes.user.role')
+          %td= @user.role.text
+        %tr
+          %td= t('activerecord.attributes.user.locale')
+          %td= @user.locale.text
+        %tr
+          %td= t('activerecord.shared.deleted')
+          %td= boolean_icon(@user.deleted)
+        %tr
+          %td= t('activerecord.attributes.user.blocked')
+          %td
+            = boolean_icon(@user.blocked)
+            - if @user.blocked?
+              .badge.badge-dark= @user.blocked_reason
+
+
+.mt-20
+  = link_to t('admin.views.shared.all'),  admin_users_path,            class: 'btn btn-primary btn-sm'
+  = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-success btn-sm' if can?(:edit, @user)
+  = admin_login_as_user_link(@user)
+
+- if can?(:view_versions, @user)
+  = render partial: 'admin/versions/partials/list', locals: {versions: @versions}
+
+  .mt-20
+    = link_to t('admin.views.shared.all'),  admin_users_path,            class: 'btn btn-primary btn-sm'
+    = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-success btn-sm' if can?(:edit, @user)
+    = admin_login_as_user_link(@user)

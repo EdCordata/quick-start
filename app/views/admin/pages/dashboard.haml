@@ -1,0 +1,15 @@
+.row.mt-20
+
+  .col-xs-12.col-sm-6.col-md-4.col-lg-3
+    .card
+      .card-header= t('activerecord.models.user')
+      .card-body
+        %div
+          %strong= t('admin.views.shared.count') + ':'
+          = User.count
+        %div
+          %strong= t('activerecord.shared.deleted') + ':'
+          = User.deleted.count
+        %div
+          %strong= t('activerecord.attributes.user.blocked') + ':'
+          = User.deleted.count

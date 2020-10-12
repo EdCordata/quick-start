@@ -13,8 +13,11 @@
   #navbarMainMenuContent.collapse.navbar-collapse
 
     %ul.navbar-nav.mr-auto
-      %li.nav-item= link_to t('views.header.links.home'),  root_path,  class: 'nav-link'
-      %li.nav-item= link_to t('views.header.links.admin'), admin_path, class: 'nav-link'
+      %li.nav-item= link_to t('views.header.links.home'),      root_path,        class: 'nav-link'
+      %li.nav-item= link_to t('views.header.links.dashboard'), admin_path,       class: 'nav-link'
+
+      - if can?(:open, :admin_users)
+        %li.nav-item= link_to t('views.header.links.users'),     admin_users_path, class: 'nav-link'
 
     %ul.navbar-nav.ml-auto
       = render partial: '_shared/header_language_switch_item'

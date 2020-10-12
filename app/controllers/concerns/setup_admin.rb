@@ -4,6 +4,7 @@ module SetupAdmin
   included do
 
     def require_admin
+      redirect_to root_path unless can?(:open, :admin)
     end
 
   end

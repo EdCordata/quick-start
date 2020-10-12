@@ -1,0 +1,47 @@
+.card.mt-20
+  .card-header.pt-12.pl-12
+    %strong= t('activerecord.models.version')
+  .card-title.mb-0
+    .table-responsive
+      %table.table.no-hover.table-borderless.table-striped.mb-0
+        %tr
+          %td= t('activerecord.shared.id')
+          %td= @version.id
+        %tr
+          %td= t('activerecord.attributes.version.event')
+          %td= @version.event.text
+        %tr
+          %td= t('activerecord.attributes.version.model')
+          %td= versions_model_link(@version)
+        %tr
+          %td= t('admin.views.shared.editor')
+          %td= versions_editor_link(@version)
+        %tr
+          %td= t('activerecord.attributes.version.fields_changed')
+          %td= versions_fields_changed_badges(@version)
+        %tr
+          %td= t('activerecord.shared.created_at')
+          %td= @version.created_at.to_s(:datetime)
+
+.card.mt-20
+  .card-header.pt-12.pl-12
+    %strong= t('admin.views.versions.fields')
+  .card-title.mb-0
+    .table-responsive
+      %table.table.no-hover.table-borderless.table-striped.mb-0
+        %thead
+          %tr
+            %th= t('admin.views.versions.field')
+            %th= t('admin.views.versions.current_version')
+            %th= t('admin.views.versions.previous_version')
+        %tbody
+          - @version.body.keys.each do |key|
+            %tr
+              %td= key
+              %td= @version.body[key]
+              %td
+                - if @previous
+                  - if @previous.body[key] == @version.body[key]
+                    %span{style: 'color: grey;'}= @previous.body[key]
+                  - else
+                    %strong{style: 'color: green;'}= @previous.body[key]

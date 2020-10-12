@@ -1,0 +1,26 @@
+.card.mt-20
+  .card-header.pt-12.pl-12
+    %strong= t('admin.views.shared.versions')
+  .card-title.mb-0
+    .table-responsive
+      %table.table.table-borderless.table-striped.mb-0
+        %thead
+          %tr
+            %th= t('activerecord.shared.id')
+            %th= t('activerecord.models.user')
+            %th= t('activerecord.attributes.version.event')
+            %th= t('activerecord.attributes.version.fields_changed')
+            %th= t('activerecord.shared.created_at')
+            %th
+        %tbody
+          - versions.each do |version|
+            %tr
+              %td= version.id
+              %td= version.editor_id.nil? ? '-' : link_to(version.editor.email, admin_user_path(version.editor_id))
+              %td= version.event.text
+              %td= versions_fields_changed_badges(version)
+              %td= version.created_at.to_s(:datetime)
+              %td.actions= link_to fa_icon('eye'), admin_version_path(version), title: t('admin.views.shared.show'), class: 'btn btn-default btn-sm'
+
+  - unless paginate(versions).blank?
+    .card-footer.pt-26.pl-30= paginate @versions, theme: 'twitter-bootstrap-4'

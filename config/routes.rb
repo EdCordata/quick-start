@@ -34,6 +34,21 @@ Rails.application.routes.draw do
       get '/', to: 'pages#dashboard'
       # --------------------------------------------------------------------------
 
+      # Versions
+      # --------------------------------------------------------------------------
+      get '/version/:id', to: 'versions#show', as: :version
+      # --------------------------------------------------------------------------
+
+      # User
+      # --------------------------------------------------------------------------
+      get   '/users',              to: 'users#index',    as: :users
+      get   '/users/:id',          to: 'users#show',     as: :user
+      get   '/users/:id/edit',     to: 'users#edit',     as: :edit_user
+      patch '/users/:id/edit',     to: 'users#update',   as: :update_user
+      get   '/users/:id/delete',   to: 'users#delete',   as: :delete_user
+      get   '/users/:id/login_as', to: 'users#login_as', as: :login_as_user
+      # --------------------------------------------------------------------------
+
     end
     # ==========================================================================
 

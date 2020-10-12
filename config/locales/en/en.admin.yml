@@ -15,4 +15,8 @@ en:
 
       main_menu:
         home: 'Home'
+        users: 'Users'
         dashboard: 'Dashboard'
+
+      users:
+        login_as: 'Login As'

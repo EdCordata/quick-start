@@ -1,0 +1,31 @@
+.mt-20
+  = link_to t('admin.views.shared.all'),  admin_users_path,       class: 'btn btn-primary btn-sm'
+  = link_to t('admin.views.shared.show'), admin_user_path(@user), class: 'btn btn-default btn-sm' if can?(:show, @user)
+  = admin_login_as_user_link(@user)
+
+
+.card.mt-20
+  = simple_form_for @user, url: admin_update_user_path(@user) do |f|
+    .card-header.pt-12.pl-12
+      %strong= t('activerecord.models.user')
+
+    .card-title.p-20
+      = f.input :email
+      = f.input :role,   collection: admin_user_role_options(@user), include_blank: false
+      = f.input :locale, collection: User.locale.options,            include_blank: false
+
+      .mt-22= f.input :deleted, disabled: !can?(:delete, @user)
+
+      .mt-18
+        = f.input :blocked, disabled: !can?(:block,  @user)
+        .js-dependent-fields{'data-checkbox-id': 'user_blocked', 'data-checkbox-value': 'true'}
+          = f.input :blocked_reason, disabled: !can?(:block,  @user)
+
+    .card-footer
+      = f.submit t('admin.views.shared.save'), class: 'btn btn-success btn-sm'
+
+
+.mt-20
+  = link_to t('admin.views.shared.all'),  admin_users_path,       class: 'btn btn-primary btn-sm'
+  = link_to t('admin.views.shared.show'), admin_user_path(@user), class: 'btn btn-default btn-sm' if can?(:show, @user)
+  = admin_login_as_user_link(@user)
