@@ -39,10 +39,16 @@ gem 'rails-i18n', '6.0.0'
 gem 'globalize-accessors', '0.1.5'
 gem 'globalize-validations', '0.0.4'
 
+# Permissions
+gem 'aasm'
+gem 'cancancan'
+
 # Misc
 gem 'foreman', '0.87.2'
 gem 'config', '2.2.1'
 gem 'faker', '2.13.0'
+gem 'bcrypt', '3.1.16'
+
 
 group :development do
   gem 'activerecord_sane_schema_dumper', '0.0.1' # So scheme changes can be normally viewed in git diff

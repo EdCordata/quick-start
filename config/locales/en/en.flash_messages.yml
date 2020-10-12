@@ -1,2 +1,8 @@
 en:
   flash_messages:
+
+    user:
+
+      sessions:
+        wrong_email_or_password: 'Wrong E-mail and/or password'
+        user_blocked: 'Your account has been blocked'

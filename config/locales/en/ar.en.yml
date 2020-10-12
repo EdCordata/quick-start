@@ -15,5 +15,21 @@ en:
       updated_at: 'Updated At'
 
     models:
+      version: 'Version'
+      user: 'User'
 
     attributes:
+
+      version:
+        body: 'Body'
+        event: 'Event'
+        model: 'Record'
+        model_id: 'Record ID'
+        editor_id: 'Editor ID'
+        fields_changed: 'Fields changed'
+
+      user:
+        role: 'Role'
+        email: 'E-mail'
+        blocked: 'Blocked'
+        encrypted_password: 'Encrypted password'

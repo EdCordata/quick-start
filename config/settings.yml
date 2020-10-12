@@ -11,3 +11,12 @@ locales:
 
 mailer:
   default_from: 'no-reply@example.com'
+
+users:
+  validations:
+    password:
+      min_length: 6
+      max_length: 255
+    email:
+      min_length: 7
+      max_length: 320
