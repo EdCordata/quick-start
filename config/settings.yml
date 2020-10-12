@@ -11,3 +11,8 @@ locales:
 
 mailer:
   default_from: 'no-reply@example.com'
+
+redis:
+  url: 'redis://localhost:6379/1'
+  namespace: <%= "rails_quick_start_#{Rails.env}" %>
+

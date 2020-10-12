@@ -6,6 +6,8 @@ gem 'rails', '6.0.3.3'
 
 # DB
 gem 'sqlite3', '1.4.2'
+gem 'redis', '4.2.2'
+gem 'redis-namespace', '1.8.0'
 
 # Server
 gem 'puma', '4.3.5'
