@@ -1,11 +1,25 @@
 development:
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-  database: db/development.sqlite3
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+  sql_mode: TRADITIONAL
+  variables:
+    sql_mode: TRADITIONAL
+  host: localhost
+  port: 3306
+  username: root
+  password: develop
+  database: rails_quick-start_development
 
 test:
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-  database: db/test.sqlite3
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+  sql_mode: TRADITIONAL
+  variables:
+    sql_mode: TRADITIONAL
+  host: localhost
+  port: 3306
+  username: root
+  password: develop
+  database: rails_quick-start_test
