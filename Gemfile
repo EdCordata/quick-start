@@ -19,8 +19,6 @@ gem 'turbolinks', '5.2.1'
 gem 'mini_racer', '0.3.1', platforms: :ruby
 gem 'gon', '6.3.2'
 
-# Assets
-
 # Views
 gem 'dependent-fields-rails', '0.4.2'
 gem 'nested_form_fields', '0.8.4'
