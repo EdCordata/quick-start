@@ -41,14 +41,8 @@ gem 'foreman', '0.87.2'
 gem 'config', '2.2.1'
 gem 'faker', '2.13.0'
 
-
 group :development do
   gem 'activerecord_sane_schema_dumper', '0.0.1' # So scheme changes can be normally viewed in git diff
-
-  # TODO: test vs pry
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '4.0.4'
-  gem 'listen', '3.2.1'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '2.1.1'
@@ -58,7 +52,6 @@ group :development do
   gem 'better_errors', '2.7.1'
   gem 'binding_of_caller', '0.8.0'
 end
-
 
 group :test do
 
@@ -71,7 +64,6 @@ group :test do
   gem 'factory_bot_rails', '6.1.0'
 end
 
-
 group :development, :test do
-  gem 'pry'
+  gem 'pry', '0.13.1'
 end
