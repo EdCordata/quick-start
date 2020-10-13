@@ -12,10 +12,10 @@ class Ability
         can :open, [:admin, :admin_users]
 
         # Admin Users
-        can [:login_as],           User
-        can [:view_versions],      User
-        can [:delete, :block],     User.where.not(id: current_user.id)
-        can [:show, :edit, :read], User
+        can [:login_as],                         User
+        can [:view_versions],                    User
+        can [:delete, :block],                   User.where.not(id: current_user.id)
+        can [:show, :update, :create, :destroy], User
         can :change_user_role, [:user, :developer]
 
       end

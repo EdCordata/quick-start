@@ -5,7 +5,7 @@ module VersionsHelper
     name = version.model + ' #' + version.model_id.to_s
 
     if version.model == 'User'
-      link_to_if can?(:show, @version.model_instance), name, admin_user_path(version.model_id)
+      link_to_if can?(:read, @version.model_instance), name, admin_user_path(version.model_id)
     else
       name
     end
@@ -14,7 +14,7 @@ module VersionsHelper
 
   def versions_editor_link(version)
     if version.editor_id
-      link_to_if can?(:show, version.editor), version.editor.email, admin_user_path(version.editor)
+      link_to_if can?(:read, version.editor), version.editor.email, admin_user_path(version.editor)
     else
       '-'
     end

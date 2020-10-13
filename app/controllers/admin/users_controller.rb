@@ -17,7 +17,7 @@ class Admin::UsersController < Admin::ApplicationController
 
 
   def show
-    if can?(:show, @user)
+    if can?(:read, @user)
       @versions = @user.versions.page(params[:page]).per(20)
     else
       redirect_to admin_users_path

@@ -1,6 +1,6 @@
 .mt-20
   = link_to t('admin.views.shared.all'),  admin_users_path,       class: 'btn btn-primary btn-sm'
-  = link_to t('admin.views.shared.show'), admin_user_path(@user), class: 'btn btn-default btn-sm' if can?(:show, @user)
+  = link_to t('admin.views.shared.show'), admin_user_path(@user), class: 'btn btn-default btn-sm' if can?(:read, @user)
   = admin_login_as_user_link(@user)
 
 
@@ -14,7 +14,7 @@
       = f.input :role,   collection: admin_user_role_options(@user), include_blank: false
       = f.input :locale, collection: User.locale.options,            include_blank: false
 
-      .mt-22= f.input :deleted, disabled: !can?(:delete, @user)
+      .mt-22= f.input :deleted, disabled: !can?(:destroy, @user)
 
       .mt-18
         = f.input :blocked, disabled: !can?(:block,  @user)
@@ -27,5 +27,5 @@
 
 .mt-20
   = link_to t('admin.views.shared.all'),  admin_users_path,       class: 'btn btn-primary btn-sm'
-  = link_to t('admin.views.shared.show'), admin_user_path(@user), class: 'btn btn-default btn-sm' if can?(:show, @user)
+  = link_to t('admin.views.shared.show'), admin_user_path(@user), class: 'btn btn-default btn-sm' if can?(:read, @user)
   = admin_login_as_user_link(@user)

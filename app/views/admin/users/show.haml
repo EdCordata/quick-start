@@ -1,6 +1,6 @@
 .mt-20
   = link_to t('admin.views.shared.all'),  admin_users_path,            class: 'btn btn-sm btn-primary'
-  = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-sm btn-success' if can?(:edit, @user)
+  = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-sm btn-success' if can?(:update, @user)
   = admin_login_as_user_link(@user)
 
 
@@ -38,7 +38,7 @@
 
 .mt-20
   = link_to t('admin.views.shared.all'),  admin_users_path,            class: 'btn btn-primary btn-sm'
-  = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-success btn-sm' if can?(:edit, @user)
+  = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-success btn-sm' if can?(:update, @user)
   = admin_login_as_user_link(@user)
 
 - if can?(:view_versions, @user)
@@ -46,5 +46,5 @@
 
   .mt-20
     = link_to t('admin.views.shared.all'),  admin_users_path,            class: 'btn btn-primary btn-sm'
-    = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-success btn-sm' if can?(:edit, @user)
+    = link_to t('admin.views.shared.edit'), admin_edit_user_path(@user), class: 'btn btn-success btn-sm' if can?(:update, @user)
     = admin_login_as_user_link(@user)
