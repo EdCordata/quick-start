@@ -6,8 +6,6 @@ gem 'rails', '6.0.3.3'
 
 # DB
 gem 'sqlite3', '1.4.2'
-gem 'redis', '4.2.2'
-gem 'redis-namespace', '1.8.0'
 
 # Server
 gem 'puma', '4.3.5'
@@ -37,6 +35,8 @@ gem 'globalize-accessors', '0.1.5'
 gem 'globalize-validations', '0.0.4'
 
 # BG
+gem 'redis', '4.2.2'
+gem 'redis-namespace', '1.8.0'
 gem 'resque', '2.0.0'
 gem 'resque-scheduler', '4.4.0'
 gem 'resque-scheduler-web', '1.1.0'
