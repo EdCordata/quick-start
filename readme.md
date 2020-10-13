@@ -23,6 +23,15 @@ After merging branches, you need you can use your favorite IDE to:
 3) Then Run `bundle install`, `npm install`, or any alternative package manager
 4) Lastly, ofc, remove this readme and `QUICK_START` folder.
 
+##### Example
+```bash
+git clone git@github.com:EdCordata/quick-start.git project-name
+cd project-name
+git merge --no-ff origin/rails-6
+git merge --no-ff origin/rails-6-mysql
+git merge --no-ff origin/rails-6-redis-resque
+```
+
 
 <br/>
 
