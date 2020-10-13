@@ -4,7 +4,7 @@
 // Application
 //= link_directory ../stylesheets .css
 //= link_directory ../javascripts .js
-//
+
 // Resque
 //= link resque_web/idle.png
 //= link resque_web/poll.png
