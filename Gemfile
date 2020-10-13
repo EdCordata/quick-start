@@ -6,8 +6,6 @@ gem 'rails', '6.0.3.3'
 
 # DB
 gem 'sqlite3', '1.4.2'
-gem 'redis', '4.2.2'
-gem 'redis-namespace', '1.8.0'
 
 # Server
 gem 'puma', '4.3.5'
@@ -35,6 +33,10 @@ gem 'enumerize', '2.3.1'
 gem 'rails-i18n', '6.0.0'
 gem 'globalize-accessors', '0.1.5'
 gem 'globalize-validations', '0.0.4'
+
+# BG
+gem 'redis', '4.2.2'
+gem 'redis-namespace', '1.8.0'
 
 # Misc
 gem 'foreman', '0.87.2'
