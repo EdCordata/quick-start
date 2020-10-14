@@ -1,27 +1,18 @@
 class Admin::UsersController < Admin::ApplicationController
-  before_action :find_user,     only: [:show, :edit, :update, :login_as]
-  before_action :validate_edit, only: [:edit, :update]
-
-  authorize_resource only: [:show, :edit, :update]
+  load_and_authorize_resource
 
 
   def index
-    authorize!(:open, :admin_users)
-
     params[:q] ||= { deleted_eq: false, blocked_eq: false }
 
-    @q     = User.ransack(params[:q])
-    @users = @q.result(distinct: true).accessible_by(current_ability)
+    @q     = @users.ransack(params[:q])
+    @users = @q.result(distinct: true)
     @users = @users.page(params[:page]).per(20)
   end
 
 
   def show
-    if can?(:read, @user)
-      @versions = @user.versions.page(params[:page]).per(20)
-    else
-      redirect_to admin_users_path
-    end
+    @versions = @user.versions.page(params[:page]).per(20)
   end
 
 
@@ -47,16 +38,6 @@ class Admin::UsersController < Admin::ApplicationController
 
 
   private
-
-
-  def find_user
-    @user = User.find(params[:id])
-  end
-
-
-  def validate_edit
-    redirect_to admin_users_path unless can?(:edit, @user)
-  end
 
 
   def user_params

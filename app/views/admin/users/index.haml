@@ -70,7 +70,7 @@
                 %td= user.created_at.to_s(:datetime)
                 %td.actions
                   = admin_login_as_user_link(user, icon_only: true)
-                  = link_to fa_icon('eye'),    admin_user_path(user),      title: t('admin.views.shared.show'), class: 'btn btn-sm btn-default' if can?(:read, user)
+                  = link_to fa_icon('eye'),    admin_user_path(user),      title: t('admin.views.shared.show'), class: 'btn btn-sm btn-default' if can?(:show,   user)
                   = link_to fa_icon('pencil'), admin_edit_user_path(user), title: t('admin.views.shared.edit'), class: 'btn btn-sm btn-success' if can?(:update, user)
 
   - unless paginate(@users).blank?
