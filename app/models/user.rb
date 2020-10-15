@@ -1,9 +1,6 @@
 class User < ApplicationRecord
-  extend Enumerize
-
   include GenerateHashId
   include Versionable
-  include AASM
 
   include Users::SetupEmail
   include Users::SetupLocale
