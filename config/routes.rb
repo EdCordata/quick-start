@@ -43,10 +43,10 @@ Rails.application.routes.draw do
       # --------------------------------------------------------------------------
       get   '/users',              to: 'users#index',    as: :users
       get   '/users/:id',          to: 'users#show',     as: :user
-      get   '/users/:id/edit',     to: 'users#edit',     as: :edit_user
-      patch '/users/:id/edit',     to: 'users#update',   as: :update_user
-      get   '/users/:id/delete',   to: 'users#delete',   as: :delete_user
-      get   '/users/:id/login_as', to: 'users#login_as', as: :login_as_user
+      get   '/users/:id/edit',     to: 'users#edit',     as: :user_edit
+      patch '/users/:id/edit',     to: 'users#update',   as: :user_update
+      get   '/users/:id/delete',   to: 'users#delete',   as: :user_delete
+      get   '/users/:id/login_as', to: 'users#login_as', as: :user_login_as
       # --------------------------------------------------------------------------
 
     end

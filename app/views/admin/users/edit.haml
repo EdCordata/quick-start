@@ -5,7 +5,7 @@
 
 
 .card.mt-20
-  = simple_form_for @user, url: admin_update_user_path(@user) do |f|
+  = simple_form_for @user, url: admin_user_update_path(@user) do |f|
     .card-header.pt-12.pl-12
       %strong= t('activerecord.models.user')
 
