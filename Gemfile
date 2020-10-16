@@ -25,6 +25,7 @@ gem 'momentjs-rails', '2.20.1'
 gem 'bootstrap', '4.5.2'
 
 # Views
+gem 'bootstrap4-kaminari-views', '1.0.1'
 gem 'dependent-fields-rails', '0.4.2'
 gem 'nested_form_fields', '0.8.4'
 gem 'simple_form', '5.0.2'
