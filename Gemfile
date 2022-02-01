@@ -28,7 +28,7 @@ gem 'ransack', '2.3.2'
 gem 'haml', '5.1.2'
 
 # Globalize
-gem 'globalize', '6.0.0.alpha.1', github: 'globalize/globalize'
+gem 'globalize', '6.0.1'
 gem 'enumerize', '2.3.1'
 gem 'rails-i18n', '6.0.0'
 gem 'globalize-accessors', '0.1.5'
